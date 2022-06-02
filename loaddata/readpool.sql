@@ -1,0 +1,1 @@
+\copy pool (name, spec, skill, attr, equip) FROM 'data/shiza.csv' DELIMITER ',' CSV;

@@ -1,0 +1,1 @@
+DELETE FROM fight_results;
