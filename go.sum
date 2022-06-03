@@ -1,2 +1,4 @@
 github.com/lib/pq v1.10.6 h1:jbk+ZieJ0D7EVGJYpL9QTz7/YW6UHbmdnZWYyK5cdBs=
 github.com/lib/pq v1.10.6/go.mod h1:AlVN5x4E4T544tWzH6hKfbfQvm3HdbOxrmggDNAPY9o=
+github.com/m1gwings/treedrawer v0.3.3-beta h1:VeeQ4I90+NL0G2Tga3H4EY4hbOyVP3ID4T93r21oLbQ=
+github.com/m1gwings/treedrawer v0.3.3-beta/go.mod h1:Sebh5tCtjQWAG/B9xWct163vB9pCbBcA1ykaUErDUTY=

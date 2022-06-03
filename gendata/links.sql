@@ -1,5 +1,5 @@
 INSERT INTO
-    links(name1, type1, name2, type2, weight) with control as (
+    links(epoh, name1, type1, name2, type2, weight) with control as (
         select
             *
         from
@@ -54,6 +54,7 @@ INSERT INTO
             random()
     )
 SELECT
+    $1,
     l.name1,
     l.type1,
     r.name2,
@@ -68,4 +69,5 @@ WHERE
 ORDER BY
     random()
 LIMIT
-    600
+    50
+ON CONFLICT (name1, type1, name2, type2) DO NOTHING;

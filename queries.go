@@ -15,6 +15,7 @@ func (d *SQLBase) CreateStructure() {
 	d.ExecCommand("links", "maketables")
 	d.ExecCommand("person_links", "maketables")
 	d.ExecCommand("fight_results", "maketables")
+	d.ExecCommand("history", "maketables")
 }
 
 func (d *SQLBase) GenerateData() {
@@ -24,12 +25,11 @@ func (d *SQLBase) GenerateData() {
 	d.ExecCommand("equip", "gendata")
 	d.ExecCommand("attrs", "gendata")
 	d.ExecCommand("epohs", "gendata")
-	d.ExecCommand("links", "gendata")
-	d.ExecCommand("linkweights", "gendata")
 	d.ExecCommand("personlinks", "gendata")
 }
 
 func (d *SQLBase) PrepareFight() {
+
 	d.ExecCommand("shuffledied", "preparefight")
 	d.ExecCommand("calcpoints", "preparefight")
 	d.ExecCommand("removeweaks", "preparefight")
@@ -39,16 +39,16 @@ func (d *SQLBase) PrepareFight() {
 }
 
 func (d *SQLBase) Fight() {
+	d.ExecCommand("clear", "fight")
 	d.ExecCommand("pairup", "fight")
 	d.ExecCommand("kill", "fight")
 }
 
 func (d *SQLBase) Upgrade() {
 	d.ExecCommand("swapequip", "upgrade")
-	d.ExecCommand("clearfightresults", "upgrade")
 	d.ExecCommand("makeclones", "upgrade")
 	d.ExecCommand("linkclones", "upgrade")
-	d.ExecCommand("clearequip", "upgrade")
+	d.ExecCommand("clear", "upgrade")
 }
 
 func (d *SQLBase) Cleanup() {

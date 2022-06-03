@@ -1,4 +1,5 @@
 CREATE TABLE links (
+    epoh int NOT NULL,
     name1 varchar(32) NOT NULL,
     type1 varchar(5) NOT NULL,
     name2 varchar(32) NOT NULL,

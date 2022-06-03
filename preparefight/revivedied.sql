@@ -13,5 +13,5 @@ WHERE
         ORDER BY
             random()
         LIMIT
-            25
+            5
     );

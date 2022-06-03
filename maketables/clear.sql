@@ -3,3 +3,4 @@ DROP TABLE persons CASCADE;
 DROP TABLE links CASCADE;
 DROP TABLE person_links CASCADE;
 DROP TABLE fight_results CASCADE;
+DROP TABLE history CASCADE;

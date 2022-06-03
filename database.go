@@ -79,6 +79,15 @@ func (db *SQLBase) ExecCommand(command, method string) error {
 	return nil
 }
 
+func (db *SQLBase) ExecCommandArgs(command, method string, args []string) error {
+	_, rows, err := db.ExecFile(command, method, args)
+	if err != nil {
+		return err
+	}
+	rows.Close()
+	return nil
+}
+
 func (db *SQLBase) ExecShell(command, method string) {
 	sql_path := path.Join("./", method, command+".sql")
 	cmd := exec.Command("psql", "-U", "binarycat", "-d", "shiza", "-a", "-f", sql_path)

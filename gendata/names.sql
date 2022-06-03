@@ -8,4 +8,4 @@ from
 ORDER BY
     random()
 LIMIT
-    100;
+    20;
